@@ -1,0 +1,28 @@
+---
+
+- name: app
+  version: '${BuildInfo.version}'
+
+  arguments:
+
+    - name: input
+      type: file
+
+    - name: output
+      type: file
+
+  options:
+
+    - name: threads
+      long: '--threads'
+      short: '-t'
+      type: int
+      brief: short description for help
+      description: long description for man
+
+    - name: verbose
+      long: '--verbose'
+      short: '-v'
+      type: boolean
+
+...
