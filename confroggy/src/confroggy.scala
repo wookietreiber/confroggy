@@ -108,6 +108,22 @@ object Gen {
                  |""".stripMargin
     }
 
+    { // other options section
+      // TODO put deprecated, hidden and ignored options here
+      sb ++= s"""|.SH OTHER OPTIONS
+                 |.TP
+                 |\\fB\\-?\\fR, \\fB\\-\\-help\\fR
+                 |Shows help text and exit.
+                 |.TP
+                 |\\fB\\-\\-version\\fR
+                 |Shows version and exit.
+                 |.TP
+                 |\\fB\\-\\-\\fR
+                 |Separates \\fBOPTIONS\\fR from \\fBARGUMENTS\\fR. This is
+                 |useful when arguments start with dashes, e.g. file names.
+                 |""".stripMargin
+    }
+
     sb.result()
   }
 }
